@@ -28,6 +28,13 @@
         <a href="#">ログアウト</a></div>
     </div>
   </header>
+  <% if flash.present? %>
+    <div class="flash">
+      <% flash.each do |key, value| %>
+        <div class="<%= key %>" ><%= value %></div>
+      <% end %>
+    </div>
+  <% end %>
     <%= yield %>
   </body>
 </html>
