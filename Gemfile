@@ -60,3 +60,5 @@ end
 gem "cssbundling-rails"
 
 gem 'faker'
+
+gem 'importmap'
