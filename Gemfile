@@ -65,3 +65,5 @@ gem 'faker'
 gem 'importmap'
 
 gem 'hamlit'
+
+gem 'annotate'
