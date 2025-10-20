@@ -63,3 +63,5 @@ gem "cssbundling-rails"
 gem 'faker'
 
 gem 'importmap'
+
+gem 'hamlit'
