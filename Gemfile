@@ -78,3 +78,5 @@ gem 'binding_of_caller'
 gem 'devise'
 
 gem 'aws-sdk-s3', require: false
+
+gem "importmap-rails", "~> 2.2"
