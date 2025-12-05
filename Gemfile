@@ -33,16 +33,16 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
-gem 'webpacker', '~> 4.0', '>= 4.0.7'
+gem 'image_processing', '~> 1.2'
 gem 'psych', '~> 3.1'
+gem 'webpacker', '~> 4.0', '>= 4.0.7'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[ mri windows ], require: 'debug/prelude'
+  gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'rubocop-rails'
-  gem 'dotenv-rails'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
@@ -79,4 +79,4 @@ gem 'devise'
 
 gem 'aws-sdk-s3', require: false
 
-gem "importmap-rails", "~> 2.2"
+gem 'importmap-rails', '~> 2.2'
