@@ -71,7 +71,7 @@ gem 'importmap'
 gem 'hamlit'
 
 gem 'annotate'
-
+gem 'active_decorator'
 gem 'better_errors'
 gem 'binding_of_caller'
 
