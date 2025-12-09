@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   # get '/' => 'home#index'
 
+  resource :timeline, only: [:show]
+
   resources :articles do
     resources :comments, only: [:new, :create]
 
@@ -22,6 +24,11 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+
+  resources :accounts, only: [:show] do
+    resources :follows, only: [:create]
+    resources :unfollows, only: [:create]
+  end
 
   resource :profile, only: [:show, :edit, :update]
   resources :favorites, only: [:index]
