@@ -66,7 +66,7 @@ gem 'cssbundling-rails'
 
 gem 'faker'
 
-gem 'importmap'
+# gem 'importmap'
 
 gem 'hamlit'
 
@@ -80,3 +80,5 @@ gem 'devise'
 gem 'aws-sdk-s3', require: false
 
 gem 'importmap-rails', '~> 2.2'
+
+gem 'openssl'

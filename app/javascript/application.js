@@ -4,8 +4,10 @@ import "@hotwired/turbo-rails";
 import "trix";
 import "@rails/actiontext";
 
+import $ from 'jquery'
+
 document.addEventListener("DOMContentLoaded", () => {
-  debugger;
-  console.log("ohayou");
-  window.alert("DOM LOADED");
+  $('.article_title').on('click', () => {
+    window.alert('CLICKED');
+  });
 });
