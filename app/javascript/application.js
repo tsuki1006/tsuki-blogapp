@@ -7,7 +7,7 @@ import "@rails/actiontext";
 import $ from 'jquery'
 import axios from 'axios'
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
   $('.article_title').on('click', () => {
     axios.get('/')
       .then((response) => {
