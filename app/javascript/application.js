@@ -1,9 +1,11 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
+import "@hotwired/turbo-rails";
 
-import "trix"
-import "@rails/actiontext"
+import "trix";
+import "@rails/actiontext";
 
-document.addEventListener('DOMContentLoaded', () => {
-  window.alert('DOM LOADED')
-})
+document.addEventListener("DOMContentLoaded", () => {
+  debugger;
+  console.log("ohayou");
+  window.alert("DOM LOADED");
+});

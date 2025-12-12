@@ -2,6 +2,11 @@
   "name": "app",
   "private": true,
   "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-transform-private-methods": "^7.27.1",
+    "@babel/plugin-transform-private-property-in-object": "^7.27.1",
+    "@babel/preset-env": "^7.28.5",
+    "babel-loader": "^10.0.0",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
