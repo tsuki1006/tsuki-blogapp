@@ -6,6 +6,10 @@ import "@rails/actiontext";
 
 import $ from 'jquery'
 import axios from 'axios'
+import { AttributeObserver } from "@hotwired/stimulus";
+import Rails from "@rails/ujs"
+
+axios.defaults.headers.common['X-CSRF-Token'] = Rails.csrfToken()
 
 const handleHeartDisplay = (hasLiked) => {
   if (hasLiked) {
@@ -24,4 +28,26 @@ document.addEventListener("turbo:load", () => {
       const hasLiked = response.data.hasLiked;
       handleHeartDisplay(hasLiked)
     });
+
+  $('.inactive-heart').on('click', () => {
+    axios.post(`/articles/${articleId}/like`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        window.alert('Error');
+        console.log(e);
+      });
+  });
+
+  $('.active-heart').on('click', () => {
+    axios.delete(`/articles/${articleId}/like`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((e) => {
+        window.alert('Error');
+        console.log(e);
+      });
+  });
 });
