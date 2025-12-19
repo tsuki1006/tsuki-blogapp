@@ -25,9 +25,9 @@ module.exports = {
 
   resolve: {
 
-    modules: [  // 探索パスをプロジェクト内に制限
-      path.resolve(__dirname, 'node_modules'),
-      'node_modules'
+    modules: [
+      path.resolve(__dirname, 'app/javascript'), // 1. アプリケーションの JS ルート
+      'node_modules'                             // 2. それで見つからなければ node_modules
     ],
 
     alias: {  // インポートを簡潔にするためのエイリアス

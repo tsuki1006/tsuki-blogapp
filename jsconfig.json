@@ -6,7 +6,10 @@
     "moduleResolution": "node",
     "checkJs": true,
     "paths": {
-      "*": ["node_modules/*"] // ← 個別に書かなくても node_modules 全体を見るようになる
+      "*": [
+        "app/javascript/*",  // 1. まず app/javascript 内を探索するように設定
+        "node_modules/*"
+      ]
     }
   },
   "exclude": ["node_modules", "public", "app/assets/builds"]
