@@ -1,13 +1,10 @@
 import $ from 'jquery';
-import axios from 'axios';
+import axios from 'modules/axios'
 import { AttributeObserver } from "@hotwired/stimulus";
-import Rails from '@rails/ujs';
 import {
   listenInactiveHeartEvent,
   listenActiveHeartEvent
 } from 'modules/handle_heart';
-
-axios.defaults.headers.common['X-CSRF-Token'] = Rails.csrfToken();
 
 const handleHeartDisplay = (hasLiked) => {
   if (hasLiked) {

@@ -1,9 +1,6 @@
 import $ from 'jquery';
-import axios from 'axios';
+import axios from 'modules/axios'
 import { AttributeObserver } from "@hotwired/stimulus";
-import Rails from '@rails/ujs';
-
-axios.defaults.headers.common['X-CSRF-Token'] = Rails.csrfToken();
 
 const listenInactiveHeartEvent = (articleId) => {
   $('.inactive-heart').on('click', () => {
