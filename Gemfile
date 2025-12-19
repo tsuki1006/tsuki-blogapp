@@ -66,11 +66,12 @@ gem 'cssbundling-rails'
 
 gem 'faker'
 
-gem 'importmap'
+# gem 'importmap'
 
 gem 'hamlit'
 
 gem 'active_decorator'
+gem 'active_model_serializers'
 gem 'annotate'
 gem 'better_errors'
 gem 'binding_of_caller'
@@ -80,3 +81,5 @@ gem 'devise'
 gem 'aws-sdk-s3', require: false
 
 gem 'importmap-rails', '~> 2.2'
+
+gem 'openssl'
