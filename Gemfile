@@ -85,3 +85,5 @@ gem 'aws-sdk-s3', require: false
 gem 'importmap-rails', '~> 2.2'
 
 gem 'openssl'
+
+gem 'sidekiq'
