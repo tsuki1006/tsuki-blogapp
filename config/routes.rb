@@ -20,8 +20,6 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   # get '/' => 'home#index'
 
-  resource :timeline, only: [:show]
-
   resources :articles
 
   devise_for :users
@@ -31,8 +29,12 @@ Rails.application.routes.draw do
     resources :unfollows, only: [:create]
   end
 
-  resource :profile, only: [:show, :edit, :update]
-  resources :favorites, only: [:index]
+  scope module: :apps do
+    resources :favorites, only: [:index]
+    resource :timeline, only: [:show]
+    resource :profile, only: [:show, :edit, :update]
+  end
+
 
   namespace :api, defaults: {format: :json} do
     scope '/articles/:article_id' do
