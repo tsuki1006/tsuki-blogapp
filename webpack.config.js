@@ -1,9 +1,12 @@
 const path    = require("path")
 const webpack = require("webpack")
 
+// 環境変数によって mode を切り替える
+const mode = process.env.NODE_ENV === "production" ? "production" : "development"
+
 module.exports = {
-  mode: "development",
-  devtool: "source-map",
+  mode: mode, // 変更
+  devtool: mode === "development" ? "source-map" : false, // 本番ではsource-mapをオフにするのが一般的
 
   entry: {  // エントリポイントを整理
     application: "./app/javascript/application.js",
